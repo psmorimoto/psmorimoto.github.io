@@ -10,5 +10,114 @@
 <body>
   <h1>Hello World</h1>
   <h2>Paul's Resume</h2>
+  <article>
+    <h3>Technical Skills</h3>
+    <div>Front-End: Javascript, React, Git, HTML/CSS, jQuery</div>
+    <div>Back-End: MySQL, MongoDB/Mongoose.js, AWS EC2, Docker, Node.js/Express</div>
+  </article>
+  <!-- Start of Projects Section -->
+  <article>
+    <h3>Projects</h3>
+    <section>
+      <h4>QuickBite</h4>
+      <div>Application allowing users to check reviews for restaurant deliveries</div>
+      <ul>
+        <li>
+          Horizontally scaled and deployed microservice backend to handle 2200 RPS with an average latency of 60ms utilizing
+          an Nginx load balancer and 3 express servers
+        </li>
+        <li>
+          Tested server under load using k-6 testing and analyzed RPS and latency with newRelic software
+        </li>
+        <li>
+          Generated and Seeded 30 million data points for MongoDB and Postgres to determine optimal database for
+          microservice
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h4>Lazy Lodging</h4>
+      <div>Application allowing users to view homes to rent modeled after Airbnb</div>
+      <ul>
+        <li>
+          Designed photo stream component with React in order to render user uploaded photos
+        </li>
+        <li>
+          Utilized React Inline styling to avoid styling conflicts with other microservices
+        </li>
+        <li>
+          Created MySQL database and utilized AWS S3 to persist user uploaded images
+        </li>
+        <li>
+          Deployed a microservice with Docker and AWS EC2 to reduce coupling with teams development environment
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h4>The Perfect Cup</h4>
+      <div>Website for users who want to brew their own coffee</div>
+      <ul>
+        <li>
+          Designed front-end using React components
+        </li>
+        <li>
+          Implemented RESTful API routes with Express.js and MongoDB
+        </li>
+      </ul>
+    </section>
+  </article>
+<!-- Experience Section -->
+  <article>
+    <h3>Experience</h3>
+    <section>
+      <h4>Verdani Partners - Energy Engineer | Carlsbad, CA</h4>
+      <div>2014 - 2016</div>
+      <ul>
+        <li>
+          Consulted and submitted 15 Leadership in Energy and Environmental Design projects for class A office buildings
+        </li>
+        <li>
+          Reviewed and approved 70+ Leadership in Energy and Environmental Design projects
+        </li>
+        <li>
+          Benchmarked 500+ buildings on Energy Star Portfolio Manager
+        </li>
+        <li>
+          Performed onsite energy efficiency audits for 5 multi-use buildings, and provided energy saving recommendations
+        </li>
+        <li>
+          Guest lectured Masters in Real Estate class about Leadership in Energy and Environmental Design
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h4>BaySun Solar - Lead Solar Canvasser | San Jose, CA</h4>
+      <div>2017 - 2018</div>
+      <ul>
+        <li>
+          Generated and qualified leads for sales team to identify potential prospects for roof-top solar
+        </li>
+        <li>
+          Trained and onboarded new canvassers
+        </li>
+      </ul>
+    </section>
+  </article>
+  <!-- Education Section -->
+  <article>
+    <h3>Education</h3>
+    <section>
+      Hack Reactor , Advanced Software Engineering Immersive
+    </section>
+    <section>
+      University of California, San Diego , BS Environmental Engineering
+      <ul>
+        <li>
+          Relevant CourseWork: Matlab for Statistical Analysis, Introduction to C++, Probability and Statistics for Engineers
+        </li>
+      </ul>
+    </section>
+  </article>
+
 </body>
 </html>
