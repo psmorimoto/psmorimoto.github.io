@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import Projects from './projects';
 
 const App = (props) => {
   return (
@@ -9,4 +11,13 @@ const App = (props) => {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('react-app'));
+const routing = (
+  <Router>
+    <div>
+      <Route exact path="/" component={App} />
+      <Route path="/users" component={Projects} />
+    </div>
+  </Router>
+)
+
+ReactDOM.render(<routing />, document.getElementById('react-app'));
