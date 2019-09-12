@@ -14,8 +14,10 @@ const App = (props) => {
 const routing = (
   <Router>
     <div>
-      <Route exact path="/" component={App} />
-      <Route path="/users" component={Projects} />
+      <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
+        <Route exact path="/" component={App} />
+        <Route path="/projects" component={Projects} />
+      </BrowserRouter>
     </div>
   </Router>
 )
