@@ -16,7 +16,7 @@ const routing = (
     <HashRouter basename="/">
       <div>
         <Route exact path="/" component={App} />
-        <Route path="/projects" component={Projects} />
+        <Route path={process.env.PUBLIC_URL + '/'} component={Projects} />
       </div>
     </HashRouter>
   </Router>
