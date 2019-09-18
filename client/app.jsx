@@ -1,25 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Route, Link, HashRouter, BrowserRouter as Router } from 'react-router-dom';
-import Projects from './projects';
+import Projects from './projects.jsx';
 
-const App = (props) => {
+const Index = (props) => {
   return (
     <div>
-      <h1>REACT COMPONENT RENDERING</h1>
+      <h1>Home</h1>
     </div>
   )
 }
 
-const routing = (
-  <Router>
-    <HashRouter basename="/">
+const About = (props) => {
+  return (
+    <h2>About</h2>
+  )
+}
+
+const routing = (props) => {
+  return (
+    <Router>
       <div>
-        <Route exact path="/" component={App} />
-        <Route path={process.env.PUBLIC_URL + '/'} component={Projects} />
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about/">About</Link>
+            </li>
+          </ul>
+        </nav>
+        <Route path="/" exact component={Index} />
+        <Route path="/about/" component={About} />
       </div>
-    </HashRouter>
-  </Router>
-)
+    </Router>
+  )
+}
+
 
 ReactDOM.render(<routing />, document.getElementById('react-app'));
+
+{/* <Route exact path="/" component={App} />
+<Route path={process.env.PUBLIC_URL + '/'} component={Projects} /> */}
