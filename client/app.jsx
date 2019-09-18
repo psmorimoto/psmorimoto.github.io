@@ -2,37 +2,39 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Route, Link, HashRouter, BrowserRouter as Router } from 'react-router-dom';
 import Projects from './projects.jsx';
-
-const Index = (props) => {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  )
-}
-
-const About = (props) => {
-  return (
-    <h2>About</h2>
-  )
-}
+import Home from './home.jsx';
+import About from './about.jsx';
+import Experience from './experience.jsx';
 
 const Routing = (props) => {
   return (
     <Router>
       <div>
         <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about/">About</Link>
-            </li>
-          </ul>
+          <div className="container">
+            <div className="navbar-header">
+              <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span className="sr-only">Toggle navigation</span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </button>
+              <a className="navbar-brand" href="#">Paul Morimoto</a>
+            </div>
+            <div id="navbar" className="collapse navbar-collapse">
+              <ul className="nav navbar-nav">
+                <li className="active"><Link to="/">Home</Link></li>
+                <li><Link to="/about/">About</Link></li>
+                <li><Link to="/projects/">Projects</Link></li>
+                <li><Link to="/experience/">Experience</Link></li>
+              </ul>
+            </div>
+          </div>
         </nav>
-        <Route path="/" exact component={Index} />
+        <Route path="/" exact component={Home} />
         <Route path="/about/" component={About} />
+        <Route path="/projects/" component={Projects} />
+        <Route path="/experience/" component={Experience} />
       </div>
     </Router>
   )
@@ -41,5 +43,3 @@ const Routing = (props) => {
 
 ReactDOM.render(<Routing />, document.getElementById('react-app'));
 
-{/* <Route exact path="/" component={App} />
-<Route path={process.env.PUBLIC_URL + '/'} component={Projects} /> */}
