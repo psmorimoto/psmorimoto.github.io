@@ -17,7 +17,7 @@ const About = (props) => {
   )
 }
 
-const routing = (props) => {
+const Routing = (props) => {
   return (
     <Router>
       <div>
@@ -39,7 +39,7 @@ const routing = (props) => {
 }
 
 
-ReactDOM.render(<routing />, document.getElementById('react-app'));
+ReactDOM.render(<Routing />, document.getElementById('react-app'));
 
 {/* <Route exact path="/" component={App} />
 <Route path={process.env.PUBLIC_URL + '/'} component={Projects} /> */}
