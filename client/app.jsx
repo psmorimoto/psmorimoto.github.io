@@ -5,6 +5,7 @@ import Projects from './projects.jsx';
 import Home from './home.jsx';
 import About from './about.jsx';
 import Experience from './experience.jsx';
+import Contact from './contact.jsx';
 
 const Routing = (props) => {
   return (
@@ -27,6 +28,7 @@ const Routing = (props) => {
                 <li><Link to="/about/">About</Link></li>
                 <li><Link to="/projects/">Projects</Link></li>
                 <li><Link to="/experience/">Experience</Link></li>
+                <li><Link to="/contact/">Contact</Link></li>
               </ul>
             </div>
           </div>
@@ -35,6 +37,7 @@ const Routing = (props) => {
         <Route path="/about/" component={About} />
         <Route path="/projects/" component={Projects} />
         <Route path="/experience/" component={Experience} />
+        <Route path="/contact/" component={Contact} />
       </div>
     </Router>
   )
